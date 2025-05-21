@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
     <link rel="icon" href="./images/favicon.ico" />
-    <link rel="icon" href="./images/favicon.svg" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./images/mobile-icon.png" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
   </head>
+
   <body class="page">
     <header class="header decorated-zone">
-      <div class="rec" aria-hidden="true">rec</div>
+      <span class="rec" aria-hidden="true">rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -46,16 +47,13 @@
           </li>
         </ul>
       </nav>
-      <div class="header__cover">
-        <span class="hero-word header__word">no</span>
-        <span class="hero-word header__word">focus</span>
-      </div>
+      <h1 class="header__cover hero_word">no focus</h1>
       <div class="header__title-container">
-        <h1 class="header__title title-decor heading">
+        <p class="header__title title-decor heading">
           Что делать, когда не можешь делать ничего<br />
           Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо
-        </h1>
+        </p>
       </div>
     </header>
     <main class="main_content">
@@ -72,8 +70,10 @@
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
               её просто не существует. Исследователи
               <a
-                href="javascript:void(0)"
+                href="https://dana.org/article/multicosts-of-multitasking/"
                 class="why_content_word-accent word-accent"
+                target="_blank"
+                rel="noopener noreferrer"
                 >выяснили</a
               >, что мозгу тяжело концентрироваться даже на двух делах
               одновременно. А когда в поле внимания попадает несколько важных
@@ -175,7 +175,7 @@
               <p class="how_content-text text">
                 Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
                 <a
-                  href="https://www.sciencedirect.com/"
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
                   class="how_content_word-accent word-accent"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -245,9 +245,7 @@
       </section>
     </main>
     <footer class="footer decorated-zone">
-      <div class="footer__cover">
-        <span class="hero-word footer__word">focus</span>
-      </div>
+      <h2 class="footer__cover hero_word">focus</h2>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>
