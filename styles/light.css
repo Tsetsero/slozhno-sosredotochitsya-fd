@@ -6,7 +6,7 @@
 
 :root.theme-light {
   --main-bg: url("../images/cover-image-light.png");
-  --main-bg-color: #FFF1F7;
+  --main-bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #ff8dcb;
   --hero-word-color: #ffc2e6;
@@ -16,12 +16,13 @@
   --color-button-text: var(--text-color, #353430);
   --title-color: var(--text-color, #353430);
   --color-rec: transparent;
+  --heading-color: var(--text-color, #353430);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --main-bg: url("../images/cover-image-light.png");
-    --main-bg-color: #FFF1F7;
+    --main-bg-color: #fff1f7;
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --hero-word-color: #ffc2e6;
@@ -31,5 +32,6 @@
     --color-button-text: var(--text-color, #353430);
     --title-color: var(--text-color, #353430);
     --color-rec: transparent;
+    --heading-color: var(--text-color, #353430);
   }
 }

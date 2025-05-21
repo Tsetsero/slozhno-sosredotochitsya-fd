@@ -15,6 +15,7 @@
   --bg-color: #000028;
   --hero-word-color: #db00ff;
   --color-rec: var(--accent-color, #ff0070);
+  --heading-color: #000028;
   --font-weight-bold: 700;
   --font-weight-normal: 400;
   --line-height-hw: 83%;
