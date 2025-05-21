@@ -268,7 +268,7 @@
   .content_section.how {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 11px;
+    column-gap: 20px;
   }
 
   .what_heading {
@@ -344,6 +344,11 @@
   .header__title {
     inline-size: 491px;
     min-block-size: 70px;
+  }
+
+  .content_section.why,
+  .content_section.how {
+    column-gap: 11px;
   }
 
   .content_section.what {
