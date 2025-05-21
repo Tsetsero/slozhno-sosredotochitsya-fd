@@ -21,6 +21,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --main-bg: url("../images/cover-image-light.png");
+    --main-bg-color: #FFF1F7;
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --hero-word-color: #ffc2e6;
