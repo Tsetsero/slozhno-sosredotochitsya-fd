@@ -1,5 +1,363 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: grid;
+  background-image: var(--main-bg, (url("../images/cover-image-dark.png")));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  padding: 10px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25.04px;
+  height: 25px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: var(--accent-color, #ff0070);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 9.5px;
+  right: 10.5px;
+  width: 25.04px;
+  height: 25px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: var(--accent-color, #ff0070);
+}
+
+.rec {
+  position: absolute;
+  right: 19px;
+  display: flex;
+  grid-row: 1;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color, #ff0070);
+  font-family: var(--font-family, "IBM Plex Mono", sans-serif);
+  font-size: var(--font-size, 18px);
+  text-transform: uppercase;
+}
+
+.rec::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 1px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #ff0070);
+  background-color: var(--accent-color, #ff0070);
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  padding-block-start: 10px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  border: 1px solid transparent;
+  outline: none;
+  color: var(--accent-color, #ff0070);
+  font-family: var(--font-family, "IBM Plex Mono", sans-serif);
+  font-weight: var(--font-weight-normal, 400);
+  font-size: var(--font-size, 18px);
+  line-height: var(--line-height-bt, 18px);
+  background-color: transparent;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-hover-bt, #ff007066);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-color: transparent;
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color, #ff0070);
+  pointer-events: none;
+}
+
+.header__cover {
+  grid-row: 2;
+  align-self: center;
+}
+
+.hero-word {
+  color: var(--hero-word-color, #db00ff);
+  font-family: var(--font-family, "IBM Plex Mono", sans-serif);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-hw, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
+  line-height: var(--line-height-hw, 83%);
+}
+
+.header__word {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__title-container {
+  grid-row: 3;
+  align-self: center;
+}
+
+.header__title {
+  font-size: var(--font-size, 18px);
+  min-block-size: 117px;
+}
+
+.main_content {
+  display: grid;
+  gap: 30px;
+  padding: 10px;
+}
+
+.content_section {
+  font-family: var(--font-family, "IBM Plex Mono", sans-serif);
+  font-size: var(--font-size, 18px);
+  line-height: var(--line-height, 23.4px);
+}
+
+.article-block {
+  display: grid;
+}
+
+.heading {
+  margin-block-end: 20px;
+  color: var(--accent-color, #ff0070);
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.title-decor {
+  margin-block-end: 10px;
+  color: var(--heading-color, #000028);
+  font-family: var(--font-family, "IBM Plex Mono", sans-serif);
+  background-color: var(--accent-color, #ff0070);
+}
+
+.text {
+  margin-block-end: 20px;
+  color: var(--text-color, #f1b2ce);
+  font-weight: var(--font-weight-normal, 400);
+}
+
+.how_content-sub-heading {
+  margin-block-start: 10px;
+  color: var(--heading-color, #000028);
+  font-weight: var(--font-weight-normal, 400);
+}
+.word-accent {
+  text-decoration: none;
+  text-shadow: 1.5px 1.5px 0 var(--accent-color);
+}
+
+.word-accent:hover {
+  border-bottom: 1px solid var(--text-color, #f1b2ce);
+}
+
+.word-accent:focus-visible {
+  border: 1px solid var(--text-color, #f1b2ce);
+  outline: none;
+}
+
+.image {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.image_gallery-item {
+  justify-self: center;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.footer__word {
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 19px;
+    right: 21px;
+  }
+
+  .rec {
+    margin-inline-end: 10px;
+    margin-block: 20px;
+  }
+
+  .header__theme-menu {
+    align-self: end;
+    margin-inline-end: 20px;
+    padding-block-end: 52px;
+  }
+
+  .header__word {
+    margin-inline-end: 68px;
+  }
+
+  .hero-word {
+    font-size: var(
+      --font-size-hw-ds,
+      (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)
+    );
+  }
+
+  .header__title-container {
+    justify-self: end;
+    align-self: start;
+    padding-inline-end: 20px;
+    padding-block-start: 43px;
+  }
+
+  .header__title {
+    inline-size: 364px;
+  }
+
+  .main_content {
+    gap: 60px;
+    padding: 20px;
+  }
+
+  .content_section.why,
+  .content_section.how {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  .what_heading {
+    max-width: 236px;
+  }
+
+  .gallery_heading {
+    margin-block-end: 21px;
+  }
+
+  .image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(100px, auto));
+    gap: 20px;
+  }
+  .image_gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image_sunset {
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+  }
+
+  .image_ice-cream {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .image_tape {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+  }
+
+  .image_books {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .image_street {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    margin: 0;
+    padding-block-start: 19.5px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__word {
+    margin-inline-end: 90px;
+  }
+
+  .header__title-container {
+    padding-block-start: 51px;
+  }
+
+  .header__title {
+    inline-size: 491px;
+    min-block-size: 71px;
+  }
+
+  .content_section.what {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .what_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
+    gap: 20px;
+  }
+
+  .what_heading {
+    max-width: 315px;
+  }
+
+  .what_content-reasons {
+    align-self: start;
+  }
 }

@@ -6,10 +6,24 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body {
+  height: 100%;
+  margin: 0 auto;
+  font-size: 1em;
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 h1,
@@ -20,6 +34,7 @@ h5,
 h6,
 p {
   margin: 0;
+  font-size: inherit;
 }
 
 ul {
