@@ -12,4 +12,8 @@
   --hero-word-color: #db00ff;
   --bg-color: #000028;
   --color-hover-bt: #ff007066;
+  --border-color: var(--accent-color, #ff0070);
+  --color-button-text: var(--accent-color, #ff0070);
+  --title-color: var(--accent-color, #ff0070);
+  --color-rec: var(--accent-color, #ff0070);
 }
