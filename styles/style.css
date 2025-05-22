@@ -17,6 +17,7 @@
   grid-template-rows: repeat(3, 1fr);
   padding: 10px;
   min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -128,7 +129,6 @@
 
 .header__title {
   font-size: var(--font-size, 18px);
-  min-block-size: 117px;
 }
 
 .main_content {
@@ -151,6 +151,7 @@
 .heading {
   margin-block-end: 20px;
   color: var(--title-color, #ff0070);
+  font-size: var(--font-size, 18px);
   font-weight: var(--font-weight-bold, 700);
 }
 
@@ -168,7 +169,7 @@
 }
 
 .how_content-sub-heading {
-  margin-block-start: 10px;
+  margin-block-start: 8px;
   color: var(--heading-color, #000028);
   font-weight: var(--font-weight-normal, 400);
 }
